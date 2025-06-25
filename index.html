@@ -414,13 +414,12 @@
             const tier1TargetsCtx = document.getElementById('tier1TargetsChart');
             if(tier1TargetsCtx) {
                 const rawLabels = [
-                    'Rochester PD (DFR Intent)', 
                     'Sioux Falls PD (Upgrade)', 
                     'Pennington Co. SO (Upgrade & DFR)', 
+                    'Minnehaha Co. SO (Regional Influence)',
                     'Washington Co. SO (Leadership Change)', 
-                    'Dakota Co. SO (Upgrade)',
                     'Scott Co. SO (DFR Potential)',
-                    'Olmsted Co. SO (DFR Potential)'
+                    'Blue Earth Co. SO (Program Formalization)'
                 ];
                 new Chart(tier1TargetsCtx, {
                     type: 'bar',
@@ -428,8 +427,8 @@
                         labels: rawLabels.map(label => wrapLabel(label, 25)),
                         datasets: [{
                             label: 'Opportunity Score',
-                            data: [100, 95, 90, 85, 80, 75, 70],
-                            backgroundColor: [vibrantPalette.primary, vibrantPalette.accent, vibrantPalette.secondary, vibrantPalette.highlight, '#64B5F6', '#81C784', '#FFD54F'].slice(0, rawLabels.length),
+                            data: [95, 90, 88, 85, 80, 78],
+                            backgroundColor: [vibrantPalette.primary, vibrantPalette.accent, vibrantPalette.secondary, vibrantPalette.highlight, '#64B5F6', '#81C784'].slice(0, rawLabels.length),
                             borderColor: 'white',
                             borderWidth: 2
                         }]
