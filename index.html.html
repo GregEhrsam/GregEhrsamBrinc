@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRINC UAS Sales Playbook: SD & MN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F5F5F5;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .text-shadow-custom {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+        }
+        .flow-arrow {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+        }
+        .flow-arrow-right {
+            border-left: 20px solid #0096FF;
+            right: -25px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .flow-arrow-down {
+            border-top: 20px solid #0096FF;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body class="text-gray-900">
+
+    <header class="bg-[#0047AB] text-white p-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-black uppercase text-shadow-custom">Winning the Heartland</h1>
+        <p class="text-xl md:text-2xl font-light mt-2">Your BRINC UAS Sales Playbook for South Dakota & Southern Minnesota</p>
+    </header>
+
+    <main class="container mx-auto p-4 md:p-8">
+
+        <section id="opportunity" class="my-8">
+            <h2 class="text-3xl font-bold text-center mb-8">The Opportunity: A Tale of Two Markets</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-xl p-6 border-l-8 border-[#FFC300]">
+                    <h3 class="text-2xl font-bold flex items-center"><span class="text-3xl mr-3">🏛️</span>Minnesota: The Upgrade Market</h3>
+                    <p class="mt-4 text-gray-700">A mature market with a high density of first-generation drone programs. The key driver is upgrading from aging, non-compliant foreign hardware to a secure, integrated, American-made solution.</p>
+                    <ul class="mt-4 space-y-2 font-semibold">
+                        <li><strong>Primary Goal:</strong> Mitigate Risk & Enhance Capability</li>
+                        <li><strong>Regulatory Focus:</strong> Strict (Statute § 626.19)</li>
+                        <li><strong>Sales Play:</strong> The "Compliance & Capability" Campaign</li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6 border-l-8 border-[#40E0D0]">
+                    <h3 class="text-2xl font-bold flex items-center"><span class="text-3xl mr-3">🌱</span>South Dakota: The Greenfield Market</h3>
+                    <p class="mt-4 text-gray-700">An emerging market where many agencies are just starting their drone programs. The opportunity is to define the standard with a best-in-class, accountable system from the outset.</p>
+                     <ul class="mt-4 space-y-2 font-semibold">
+                        <li><strong>Primary Goal:</strong> Establish the Standard</li>
+                        <li><strong>Regulatory Focus:</strong> Permissive (Senate Bill 80)</li>
+                        <li><strong>Sales Play:</strong> The "Future of Response" Briefing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="advantage" class="my-16">
+             <h2 class="text-3xl font-bold text-center mb-4">The Unbeatable Advantage</h2>
+             <p class="text-xl text-center text-gray-700 max-w-4xl mx-auto mb-10">Our victory lies not in selling a drone, but in delivering a fully integrated, closed-loop public safety ecosystem that no competitor can replicate.</p>
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <h3 class="text-2xl font-bold text-center text-[#0047AB] mb-8">The Motorola & BRINC Closed-Loop of Action & Data</h3>
+                <div class="relative grid grid-cols-2 md:grid-cols-5 gap-y-12 md:gap-y-0 md:gap-x-8 items-center justify-center">
+
+                    <div class="relative col-span-2 md:col-span-1 flex flex-col items-center text-center p-4 bg-gray-100 rounded-lg">
+                        <p class="text-5xl">📞</p><p class="font-bold mt-2">911 Call</p><p class="text-sm text-gray-600">VESTA 9-1-1</p>
+                        <div class="flow-arrow flow-arrow-down md:flow-arrow-right"></div>
+                    </div>
+
+                    <div class="relative col-span-2 md:col-span-1 flex flex-col items-center text-center p-4 bg-gray-100 rounded-lg">
+                        <p class="text-5xl">🖱️</p><p class="font-bold mt-2">1-Click Dispatch</p><p class="text-sm text-gray-600">CAD</p>
+                         <div class="flow-arrow flow-arrow-down md:flow-arrow-right"></div>
+                    </div>
+
+                    <div class="relative col-span-2 md:col-span-1 flex flex-col items-center text-center p-4 bg-gray-100 rounded-lg h-full">
+                        <img src="PATH_TO_YOUR_IMAGE/drone-as-first-responder (1).webp" alt="BRINC Drone Deploys" class="h-16 w-auto">
+                        <p class="font-bold mt-2">BRINC Deploys</p><p class="text-sm text-gray-600">Automated Response</p>
+                         <div class="flow-arrow flow-arrow-down md:flow-arrow-right"></div>
+                    </div>
+
+                    <div class="relative col-span-2 md:col-span-1 flex flex-col items-center text-center p-4 bg-gray-100 rounded-lg">
+                        <p class="text-5xl">📺</p><p class="font-bold mt-2">Live Video</p><p class="text-sm text-gray-600">CommandCentral</p>
+                         <div class="flow-arrow flow-arrow-down md:flow-arrow-right"></div>
+                    </div>
+
+                     <div class="relative col-span-2 md:col-span-1 flex flex-col items-center text-center p-4 bg-gray-100 rounded-lg">
+                        <p class="text-5xl">📻</p><p class="font-bold mt-2">Field Support</p><p class="text-sm text-gray-600">APX NEXT Radio</p>
+                    </div>
+
+                </div>
+                 <div class="mt-8 text-center text-gray-700 font-semibold p-4 bg-blue-50 border-2 border-dashed border-[#0096FF] rounded-lg">
+                    This seamless integration creates an unassailable record for <span class="text-[#0047AB]">Accountability, Transparency, and Evidence Management.</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="arsenal" class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-8">The Arsenal: Right Tool, Every Mission</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <div class="p-6 bg-[#0047AB] text-white">
+                        <h3 class="text-2xl font-bold">Lemur 2: The Tactical Game-Changer</h3>
+                        <p class="font-light">For SWAT, Special Operations, and High-Risk Incidents</p>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <ul class="space-y-4">
+                            <li class="flex items-start"><span class="text-2xl mr-3">💥</span><div><span class="font-bold">Glass Breaker:</span> Breach windows without exposing officers to danger.</div></li>
+                            <li class="flex items-start"><span class="text-2xl mr-3">🗣️</span><div><span class="font-bold">2-Way Comms:</span> Negotiate and de-escalate situations from a safe distance.</div></li>
+                            <li class="flex items-start"><span class="text-2xl mr-3">🗺️</span><div><span class="font-bold">LiDAR Mapping:</span> Generate real-time 2D floor plans of interiors before entry.</div></li>
+                        </ul>
+                        <div class="chart-container h-64 md:h-auto">
+                            <canvas id="lemurUseCasesChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-xl overflow-hidden">
+                     <div class="p-6 bg-[#0096FF] text-white">
+                        <h3 class="text-2xl font-bold">Responder: The Strategic Force Multiplier</h3>
+                        <p class="font-light">For Agency Leaders looking to implement Drone as First Responder (DFR)</p>
+                    </div>
+                    <div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+                         <ul class="space-y-4">
+                            <li class="flex items-start"><span class="text-2xl mr-3">⏱️</span><div><span class="font-bold">&lt; 70s Arrival:</span> Get eyes on scene 130% faster than patrol cars.</div></li>
+                            <li class="flex items-start"><span class="text-2xl mr-3">📦</span><div><span class="font-bold">Payload Delivery:</span> Deploy life-saving equipment like AEDs or PFDs.</div></li>
+                            <li class="flex items-start"><span class="text-2xl mr-3">🔍</span><div><span class="font-bold">40x Zoom:</span> Maintain situational awareness from a secure standoff distance.</div></li>
+                        </ul>
+                         <div class="chart-container h-64 md:h-auto">
+                            <canvas id="dfrImpactChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gameplan" class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-8">The Game Plan: 4 Plays to Drive Sales</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h3 class="font-bold text-xl text-[#0047AB]">1. The "Compliance & Capability" Play</h3>
+                    <p class="text-gray-600 mt-2 mb-4">Target Minnesota agencies with aging DJI fleets. Frame the sale as a critical risk mitigation and compliance strategy.</p>
+                    <div class="chart-container h-56 md:h-64">
+                         <canvas id="minnesotaLandscapeChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h3 class="font-bold text-xl text-[#0047AB]">2. The "Tactical Dominance" Tour</h3>
+                    <p class="text-gray-600 mt-2 mb-4">Schedule hands-on Lemur 2 demos for SWAT teams. Focus on unique, life-saving capabilities that resolve high-risk incidents safely.</p>
+                    <div class="text-center p-8 bg-gray-100 rounded-lg h-56 md:h-64 flex items-center justify-center">
+                        <p class="text-6xl">💥 <span class="mx-4">+</span> 🗺️ <span class="mx-4">+</span> 🗣️</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h3 class="font-bold text-xl text-[#0047AB]">3. The "Future of Response" Briefing</h3>
+                    <p class="text-gray-600 mt-2 mb-4">Engage leadership with a DFR solution that solves strategic problems like staffing shortages and improves officer safety.</p>
+                     <div class="text-center p-8 bg-gray-100 rounded-lg h-56 md:h-64 flex flex-col items-center justify-center">
+                        <p class="text-7xl font-black text-[#0096FF]">130%</p>
+                        <p class="font-semibold text-xl">Faster Arrival Time On Scene</p>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6">
+                    <h3 class="font-bold text-xl text-[#0047AB]">4. The "Seamless Ecosystem" Play</h3>
+                    <p class="text-gray-600 mt-2 mb-4">Show all existing Motorola customers how BRINC completes their investment, creating unparalleled integrated awareness.</p>
+                     <div class="text-center p-8 bg-gray-100 rounded-lg h-56 md:h-64 flex items-center justify-center">
+                        <p class="font-bold text-lg">VESTA + CAD + AWARE + APX + BRINC = <span class="text-[#0096FF]">Complete Control</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-8">Execution Roadmap: Remainder of 2025</h2>
+            <div class="relative w-full">
+                <div class="absolute left-1/2 h-full w-1 bg-[#0096FF] rounded-full transform -translate-x-1/2"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8">
+                    
+                    <div class="md:text-right md:pr-16 mb-8">
+                        <div class="bg-white rounded-lg shadow-xl p-6 border-b-4 border-[#FFC300]">
+                            <h3 class="font-bold text-xl">Q3: Awareness & Seeding</h3>
+                             <ul class="mt-2 space-y-2 text-gray-700 list-none">
+                                <li><span class="font-semibold text-[#0047AB]">Launch</span> regional webinars.</li>
+                                <li><span class="font-semibold text-[#0047AB]">Present</span> at MSA & MCPA conferences.</li>
+                                <li><span class="font-semibold text-[#0047AB]">Schedule</span> Q4 exec briefings & demos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div></div> 
+                    
+                    <div></div>
+                    <div class="md:pl-16 mb-8">
+                        <div class="bg-white rounded-lg shadow-xl p-6 border-b-4 border-[#40E0D0]">
+                             <h3 class="font-bold text-xl">Q4: Demonstration & Budgeting</h3>
+                            <ul class="mt-2 space-y-2 text-gray-700 list-none">
+                                <li><span class="font-semibold text-[#0047AB]">Execute</span> live demonstrations.</li>
+                                <li><span class="font-semibold text-[#0047AB]">Distribute</span> "Budget Justification Kits".</li>
+                                <li><span class="font-semibold text-[#0047AB]">Align</span> proposals with FY2026 budgets.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="hitlist" class="my-16">
+            <h2 class="text-3xl font-bold text-center mb-8">The Hit List: Top Tier 1 Opportunities</h2>
+            <div class="bg-white rounded-lg shadow-xl p-6">
+                 <p class="text-center text-gray-700 mb-6">These agencies represent the highest potential for immediate DFR adoption or fleet-wide upgrades. They have established programs, identified needs, or existing deep investments in the Motorola ecosystem.</p>
+                <div class="chart-container w-full max-w-5xl mx-auto h-96 md:h-[500px]">
+                    <canvas id="tier1TargetsChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-[#0047AB] text-white p-4 text-center">
+        <p>Motorola Solutions & BRINC: The Future of Public Safety</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const vibrantPalette = {
+                primary: '#0047AB',
+                accent: '#0096FF',
+                secondary: '#40E0D0',
+                highlight: '#FFC300',
+                text: '#1C1C1C',
+                lightBg: '#F5F5F5'
+            };
+            
+            function wrapLabel(str, maxLen = 16) {
+                if (str.length <= maxLen) {
+                    return str;
+                }
+                const words = str.split(' ');
+                let lines = [];
+                let currentLine = '';
+                for (const word of words) {
+                    if ((currentLine + word).length > maxLen) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                }
+                lines.push(currentLine.trim());
+                return lines;
+            }
+            
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                  return label.join(' ');
+                } else {
+                  return label;
+                }
+            };
+            
+            const sharedTooltipOptions = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            };
+            
+            const lemurUseCasesCtx = document.getElementById('lemurUseCasesChart');
+            if(lemurUseCasesCtx) {
+                new Chart(lemurUseCasesCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Barricaded Suspects', 'Hostage Rescue', 'High-Risk Warrants'],
+                        datasets: [{
+                            label: 'Criticality',
+                            data: [95, 85, 90],
+                            backgroundColor: [vibrantPalette.primary, vibrantPalette.accent, vibrantPalette.secondary],
+                            borderColor: 'white',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        ...sharedTooltipOptions,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                ticks: { color: vibrantPalette.text },
+                                grid: { color: '#e0e0e0' }
+                            },
+                            y: {
+                                ticks: { color: vibrantPalette.text }
+                            }
+                        },
+                        plugins: {
+                             ...sharedTooltipOptions.plugins,
+                            legend: {
+                                display: false
+                            },
+                            title: {
+                                display: true,
+                                text: 'Lemur 2 Top Use Cases',
+                                color: vibrantPalette.text,
+                                font: { size: 16 }
+                            }
+                        }
+                    }
+                });
+            }
+
+            const dfrImpactCtx = document.getElementById('dfrImpactChart');
+            if(dfrImpactCtx) {
+                new Chart(dfrImpactCtx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Calls Resolved by DFR', 'Calls Requiring Officer Dispatch'],
+                        datasets: [{
+                            data: [25, 75],
+                            backgroundColor: [vibrantPalette.highlight, vibrantPalette.lightBg],
+                            borderColor: [vibrantPalette.primary, vibrantPalette.primary],
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        ...sharedTooltipOptions,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                         plugins: {
+                             ...sharedTooltipOptions.plugins,
+                            legend: {
+                                position: 'bottom',
+                                labels: { color: vibrantPalette.text }
+                            },
+                            title: {
+                                display: true,
+                                text: 'DFR Impact on Calls for Service',
+                                color: vibrantPalette.text,
+                                font: { size: 16 }
+                            }
+                        }
+                    }
+                });
+            }
+
+            const minnesotaLandscapeCtx = document.getElementById('minnesotaLandscapeChart');
+            if(minnesotaLandscapeCtx) {
+                 new Chart(minnesotaLandscapeCtx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Foreign-Made Drones (e.g., DJI)', 'Other/Opportunity for BRINC'],
+                        datasets: [{
+                            data: [80, 20],
+                            backgroundColor: [vibrantPalette.accent, vibrantPalette.highlight],
+                            borderColor: 'white',
+                            borderWidth: 3
+                        }]
+                    },
+                    options: {
+                        ...sharedTooltipOptions,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                         plugins: {
+                            ...sharedTooltipOptions.plugins,
+                            legend: {
+                                position: 'bottom',
+                                labels: { color: vibrantPalette.text }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Current Minnesota Drone Landscape',
+                                color: vibrantPalette.text,
+                                font: { size: 16 }
+                            }
+                        }
+                    }
+                });
+            }
+            
+            const tier1TargetsCtx = document.getElementById('tier1TargetsChart');
+            if(tier1TargetsCtx) {
+                const rawLabels = [
+                    'Sioux Falls PD (Upgrade)', 
+                    'Pennington Co. SO (Upgrade & DFR)', 
+                    'Minnehaha Co. SO (Regional Influence)',
+                    'Washington Co. SO (Leadership Change)', 
+                    'Scott Co. SO (DFR Potential)',
+                    'Blue Earth Co. SO (Program Formalization)'
+                ];
+                new Chart(tier1TargetsCtx, {
+                    type: 'bar',
+                    data: {
+                        labels: rawLabels.map(label => wrapLabel(label, 25)),
+                        datasets: [{
+                            label: 'Opportunity Score',
+                            data: [95, 90, 88, 85, 80, 78],
+                            backgroundColor: [vibrantPalette.primary, vibrantPalette.accent, vibrantPalette.secondary, vibrantPalette.highlight, '#64B5F6', '#81C784'].slice(0, rawLabels.length),
+                            borderColor: 'white',
+                            borderWidth: 2
+                        }]
+                    },
+                    options: {
+                        ...sharedTooltipOptions,
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        indexAxis: 'y',
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                max: 100,
+                                ticks: { color: vibrantPalette.text, font: {size: 14} },
+                                grid: { color: '#e0e0e0' }
+                            },
+                            y: {
+                                ticks: { color: vibrantPalette.text, font: {size: 14} }
+                            }
+                        },
+                        plugins: {
+                            ...sharedTooltipOptions.plugins,
+                            legend: {
+                                display: false
+                            },
+                             title: {
+                                display: true,
+                                text: 'Tier 1 Agency Opportunity Ranking',
+                                color: vibrantPalette.text,
+                                font: { size: 18 }
+                            }
+                        }
+                    }
+                });
+            }
+
+        });
+    </script>
+</body>
+</html>
